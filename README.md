@@ -94,6 +94,16 @@ my-yum-repository                        yum     hosted  http://localhost:8081/r
 
 For all commands and options, run `nexus3 -h`.
 
+### HTTPS
+For work with https repositories, set REQUESTS_CA_BUNDLE environment variable.
+```bash
+$ export REQUESTS_CA_BUNDLE=<cert-file-path>
+$ nexus3 login
+Nexus OSS URL (http://localhost:8081): https://example.com
+Nexus admin username (admin):
+Nexus admin password (admin123):
+```
+
 ### API
 
 See [API documentation](https://nexus3-cli.readthedocs.io/en/latest/api.html).
